@@ -3,8 +3,14 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
-end
+  ans = 0
+
+  for num in arr
+    ans = ans + num
+  end
+
+  return ans
+end 
 
 def max_2_sum arr
   # YOUR CODE HERE
