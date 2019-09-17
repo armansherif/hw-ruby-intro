@@ -8,16 +8,32 @@ def sum arr
   for num in arr
     ans = ans + num
   end
-
+git
   return ans
 end 
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  if arr.empty?
+    return 0
+  end
+
+  ans = 0
+  arr1 = arr.sort { |x,y| y <=> x }
+
+  if arr1.length == 1
+    return arr[0]
+  end
+
+  ans = arr1[0] + arr1[1]
+  return ans
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  if arr.empty?
+    return false
+  end
+  
+  arr.combination(2).any? { |a,b| a + b == n }
 end
 
 # Part 2
@@ -39,3 +55,7 @@ end
 class BookInStock
 # YOUR CODE HERE
 end
+
+
+arr = Array[1,2,3,4]
+max_2_sum(arr)
