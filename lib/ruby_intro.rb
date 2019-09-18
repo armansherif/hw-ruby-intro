@@ -39,15 +39,19 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  return ("Hello, " + name)
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  /^[bc-dfg-hj-np-tv-yz]/i.match(s) != nil
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  if (s =~ /\b[01]+\b/ && s.to_i % 4 == 0)
+		return true
+	else
+		return false
+	end
 end
 
 # Part 3
@@ -56,6 +60,3 @@ class BookInStock
 # YOUR CODE HERE
 end
 
-
-arr = Array[1,2,3,4]
-max_2_sum(arr)
